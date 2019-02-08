@@ -26,8 +26,8 @@ interface AppComponent {
 
         fun build(): AppComponent
 
-        fun inject(app: MyApp)
-
     }
+
+    fun inject(app: MyApp)
 
 }

@@ -26,8 +26,8 @@ data class User(
 
     var lastRefresh: Date? = null
 
-) {
+) //{
 
-    @Ignore constructor() : this(0)
+    //@Ignore constructor() : this(0)
 
-}
+//}

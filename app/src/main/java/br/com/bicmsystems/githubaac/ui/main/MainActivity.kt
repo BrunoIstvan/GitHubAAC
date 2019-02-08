@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
 
     }
 
-    override fun supportFragmentInjector(): AndroidInjector<Fragment> {
+    override fun supportFragmentInjector(): DispatchingAndroidInjector<Fragment>? {
 
         return dispatchingAndroidInjector
 
@@ -37,12 +37,11 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
         if(savedInstanceState == null) {
 
             val fragment = UserProfileFragment()
-            TODO("IMPLEMENTAR")
-            /*
+            /*//TODO("IMPLEMENTAR")*/
+
             supportFragmentManager.beginTransaction()
-                    .add( R.id.fragment_container, fragment, null)
+                    .add( R.id.container, fragment, null)
                     .commit()
-            */
 
         }
 

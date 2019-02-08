@@ -12,9 +12,9 @@ constructor(private val userRepository: UserRepository) : ViewModel() {
 
     var user: LiveData<User> = MutableLiveData<User>()
 
-    fun pesquisar(userId: String) {
+    fun pesquisar(userLogin: String) {
 
-        user = userRepository.getUser(userId)
+        user = userRepository.getUser(userLogin)
 
     }
 
