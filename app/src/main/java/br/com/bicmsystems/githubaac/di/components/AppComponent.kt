@@ -2,9 +2,7 @@ package br.com.bicmsystems.githubaac.di.components
 
 import android.app.Application
 import br.com.bicmsystems.githubaac.MyApp
-import br.com.bicmsystems.githubaac.di.modules.ActivityModule
-import br.com.bicmsystems.githubaac.di.modules.AppModule
-import br.com.bicmsystems.githubaac.di.modules.FragmentModule
+import br.com.bicmsystems.githubaac.di.modules.*
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.support.AndroidSupportInjectionModule
@@ -15,7 +13,8 @@ import javax.inject.Singleton
     modules = [AndroidSupportInjectionModule::class,
                 ActivityModule::class,
                 FragmentModule::class,
-                AppModule::class])
+                ViewModelModule::class,
+                RepositoryModule::class])
 interface AppComponent {
 
     @Component.Builder
